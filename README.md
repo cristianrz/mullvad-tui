@@ -21,6 +21,12 @@ Download the repository
 git clone https://github.com/cristianrz/mullvad-tui.git
 ```
 
+make
+
+```
+make
+```
+
 and install
 
 ```

@@ -30,7 +30,6 @@
 #
 # Provides a terminal UI for the mullvad cli app
 set -u
-trap '_quit_warning' 2
 
 _quiet() {
 	"$@" >/dev/null 2>&1
@@ -143,7 +142,9 @@ while :; do
 
 	while "$again"; do
 		again=false
+		trap '_quit_warning' 2
 		printf 'option> ' && read -r _option
+		trap 2
 
 		case "$_option" in
 		1)
@@ -175,4 +176,3 @@ while :; do
 	printf '\n'
 done
 
-trap INT
