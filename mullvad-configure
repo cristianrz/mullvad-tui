@@ -31,11 +31,8 @@
 # Provides a terminal UI for the mullvad cli app
 set -u
 trap '_quit_warning' 2
-shellcheck -x "$0" || exit 1
 
-. ./libmtui.sh
-
-_quiet(){
+_quiet() {
 	"$@" >/dev/null 2>&1
 }
 
@@ -76,16 +73,16 @@ _toggle_autoconnect() {
 	esac
 }
 
-_get_autoconnect(){
+_get_autoconnect() {
 	case "$(mullvad auto-connect get)" in
 	*off*) _autoconnect=false ;;
 	*) _autoconnect=true ;;
 	esac
-	
+
 	printf '%s' "$_autoconnect"
 }
 
-_get_block(){
+_get_block() {
 	case "$(mullvad block-when-disconnected get)" in
 	*block*) _block=true ;;
 	*) _block=false ;;
@@ -94,7 +91,7 @@ _get_block(){
 	printf '%s' "$_block"
 }
 
-_get_allow_lan(){
+_get_allow_lan() {
 	case "$(mullvad lan get)" in
 	*allow*) _allow_lan=true ;;
 	*) _allow_lan=false ;;
@@ -103,7 +100,7 @@ _get_allow_lan(){
 	printf '%s' "$_allow_lan"
 }
 
-_quit_warning(){
+_quit_warning() {
 	printf '\n"q" to exit\n'
 }
 
@@ -111,7 +108,7 @@ if [ "$#" -gt 0 ] && [ x"$1" = "x-d" ]; then
 	set -x
 fi
 
-_quit_warning(){
+_quit_warning() {
 	printf '\n"q" to exit\n'
 }
 

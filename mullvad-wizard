@@ -51,17 +51,17 @@ echo Configuring...
 	mullvad account set "$_account"
 
 	case "$_autoconnect" in
-	y* | Y* ) mullvad auto-connect set on ;;
+	y* | Y*) mullvad auto-connect set on ;;
 	*) mullvad auto-connect set off ;;
 	esac
 
 	case "$_block" in
-	n* | N* ) mullvad block-when-disconnected set off ;;
-	* ) mullvad block-when-disconnected set on ;;
+	n* | N*) mullvad block-when-disconnected set off ;;
+	*) mullvad block-when-disconnected set on ;;
 	esac
 
 	case "$_allow_lan" in
-	y* | Y* ) mullvad lan set allow ;;
+	y* | Y*) mullvad lan set allow ;;
 	*) mullvad lan set block ;;
 	esac
 } >/dev/null
@@ -71,9 +71,8 @@ echo Done
 printf 'Connect now? [y/N]: ' && read -r _is_active
 
 case "$_is_active" in
-y* | Y* ) mullvad connect ;;
+y* | Y*) mullvad connect ;;
 *) mullvad disconnect ;;
 esac
-
 
 exit 0
