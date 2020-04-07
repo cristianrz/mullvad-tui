@@ -32,6 +32,14 @@ this will give you two commands:
 * `mullvad-wizard`
 * `mullvad-configure`
 
+## TODO
+
+* Bridge
+* Factory reset
+* Relay
+* Switching servers
+* Tunnel
+
 ## Authors
 
 * **Cristian Ariza** - *Initial work* - [cristianrz](https://github.com/cristianrz)
