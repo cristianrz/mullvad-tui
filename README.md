@@ -34,11 +34,11 @@ this will give you two commands:
 
 ## TODO
 
-[ ] Bridge
-[ ] Factory reset
-[ ] Relay
-[ ] Switching servers
-[ ] Tunnel
+- [ ] Bridge
+- [ ] Factory reset
+- [ ] Relay
+- [ ] Switching servers
+- [ ] Tunnel
 
 ## Authors
 
