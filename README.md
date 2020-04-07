@@ -40,5 +40,5 @@ See also the list of [contributors](https://github.com/cristianrz/mullvad-tui/co
 
 ## License
 
-See the [[LICENSE]] file for details
+See the [LICENSE](LICENSE) file for details
 
